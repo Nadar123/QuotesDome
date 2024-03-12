@@ -1,0 +1,385 @@
+/* Preferred box-sizing value */
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Remove list styles (bullets/numbers) */
+
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* For images to not be able to exceed their container */
+
+img {
+  max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+
+table {
+  border-collapse: collapse;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+
+textarea {
+  white-space: revert;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly. */
+
+:where([contenteditable]) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/*site-main*/
+
+.site-main {
+  padding: 4rem 0;
+}
+
+.header {
+  padding: 1rem 0;
+  text-align: center;
+  border-bottom: 1px solid #000;
+}
+
+.header a {
+  cursor: pointer;
+}
+
+/*filters*/
+
+.box-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 24px;
+  padding: 3rem 0 0 0;
+}
+
+.box-select select {
+  width: 33.3%;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition: backgroundColor 0.2s ease-in-out;
+  -o-transition: backgroundColor 0.2s ease-in-out;
+  transition: backgroundColor 0.2s ease-in-out;
+}
+
+.box-select select:hover {
+  background-color: #eee;
+}
+
+.box-select select:nth-child(1) {
+  margin: 0 10px 0 0px;
+}
+
+.box-select select:nth-child(2) {
+  margin: 0 10px;
+}
+
+.box-select select:nth-child(3) {
+  margin: 0 0 0 10px;
+}
+
+.random-quote {
+  text-align: center;
+  padding: 1rem 20px;
+  line-height: 26px;
+}
+
+.quotes-archive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 24px;
+  padding: 3rem 0;
+}
+
+.quotes-archive article {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  margin: 1rem;
+  padding: 0;
+  position: relative;
+  width: 30%;
+  -webkit-transition: boxShadow 0.2s ease-in-out;
+  -o-transition: boxShadow 0.2s ease-in-out;
+  transition: boxShadow 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.quotes-archive article:hover {
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+.quotes-archive article .featured-image {
+  width: 100%;
+  height: 100%;
+  padding: 0 0 1rem 0;
+}
+
+.quotes-archive article .featured-image img {
+  width: 100%;
+  height: 215px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.quotes-archive .quotes-content-wrapper {
+  padding: 1rem;
+}
+
+.quotes-archive .quotes-content-wrapper .quotes-content {
+  min-height: 300px;
+}
+
+.quotes-archive .quotes-content-wrapper .quotes-content h2.entry-title {
+  text-transform: capitalize;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 28px;
+  padding: 10px 0;
+}
+
+.quotes-archive .quotes-content-wrapper .quotes-content .quote-text {
+  color: gray;
+  line-height: 24px;
+  font-size: 15px;
+  padding: 8px 0 40px 0;
+}
+
+.quotes-archive .quotes-content-wrapper p.quote-author {
+  font-size: 12px;
+  line-height: 16px;
+  color: #2a2727;
+  padding: 1rem 0;
+}
+
+/*pagination*/
+
+.pagination {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.pagination .page-numbers.current {
+  color: red;
+}
+
+.pagination .page-numbers:hover {
+  color: blue;
+}
+
+/*footer*/
+
+footer {
+  background: #2c2a2a;
+  color: #fff;
+  min-height: 12rem;
+}
+
+footer .footer-widgets {
+  text-align: center;
+  padding: 2rem;
+}
+
+/*mobile*/
+
+@media only screen and (max-width: 992px) {
+  .site-main {
+    padding: 0;
+  }
+
+  .content-area {
+    margin: 0 24px;
+  }
+
+  .quotes-archive {
+    display: block;
+  }
+
+  .quotes-archive article {
+    width: 100%;
+    margin: 2rem 0;
+    border: none;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  .quotes-archive article .featured-image img {
+    height: 100%;
+    min-height: 100%;
+  }
+
+  .quotes-archive article h2.entry-title {
+    font-size: 44px;
+    line-height: 48px;
+    padding: 24px 0 40px 0;
+  }
+
+  .quotes-archive p.quote-author {
+    position: unset;
+    padding: 2rem 0;
+  }
+
+  .box-select {
+    display: block;
+  }
+
+  .box-select select {
+    width: 100%;
+  }
+
+  .box-select select {
+    margin: 10px 0;
+  }
+
+  .box-select select:nth-child(3) {
+    margin: 10px 0;
+  }
+
+  .box-select select:nth-child(2) {
+    margin: 10px 0;
+  }
+
+  .box-select select:nth-child(1) {
+    margin: 10px 0;
+  }
+
+  .nav-links {
+    font-size: 22px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
